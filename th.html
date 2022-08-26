@@ -1,143 +1,264 @@
 <!DOCTYPE html>
-<html>
-<title>FNET VPN | TH</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/sansoe2022/MAX-VPN-TIPS/main/icon.png"/>
+    <title>MAX-VPN</title>
 <style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+  
+  #more {display: none;}
+  #more2 {display: none;}
+  
+  .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  height: auto;
+  margin-top: 5%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+  
+  
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+		
+
+        .btn {
+            border-radius: 10px;
+            margin-bottom: 10px;
+			height: auto;
+			width: 100%;
+            background-color:#03A9F4;
+            border: none;
+            color: white;
+            padding: 5px 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Darker background on mouse-over */
+        .btn:hover {
+            background-color:#0288C5;
+        }
+
+        #customers {
+            margin-bottom: 1%;
+            margin-top: 1%;
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td,
+        #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #333;
+            color: white;
+        }
+
+        #snackbar {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
+
+        #snackbar.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        @-webkit-keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
 </style>
-<body class="w3-light-grey">
+  </head>
 
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+  <body>
+    <div class="center">
+	  <img class="center" style="height: 100px;margin-top: 1%;"
+		src="https://raw.githubusercontent.com/sansoe2022/APP/main/icon.png" />
+	  <table id="customers">
+		<tr>
+		  <th>MaxVPN နှင့် သက်ဆိုင်‌ေသာ အသံုးပြုနည်းများ </th>
+		</tr>
+	  </table>
 
-  <!-- The Grid -->
-  <div class="w3-row-padding">
+	  <div class="card">
+		<img src="https://raw.githubusercontent.com/sansoe2022/MAX-VPN-TIPS/main/confused.png" alt="Avatar" style="width:50px; height:50px; margin-top: 10px">
+	  <div class="container">
+		<h4><b>MAX-VPN အက်ပ်ကို မည်သို့အသုံးပြုရမည်နည်း။</b></h4> 
+		<span id="dots"></span><span id="more">
+		<p>1. ပထမဆုံး ဆာဗာကို ဒေါင်းလုဒ်လုပ်ပါ (အင်တာနက် လိုအပ်ပါတယ်) </p>
+		<p>2. သင်၏အလိုရှိသောဆာဗာကိုရွေးချယ်ပြီး စက်ဝိုင်းခလုတ်ကိုနှိပ်ပါ။ </p>
+		<p>3. Add timeကို နှိပ်ပြီး ‌ေကြာ်ငြာဗီဒိယိုကြည့်ခြင်းဖြင့် အချိန်ရယူနိုင်ပါသည်။</p>
+		  <p> <a style="color:blue;" href="http://yt3.piee.pw/4duclb">အသံုးပြုနည်း ဗီဒီယိုကြည့်ရန်</a></p></span>
+		<button class="btn" onclick="myFunction()" id="myBtn">ဖတ်ရန်</button>
+	  </div>
+	
+	  </div>
+
+	  <div class="card">
+		<img src="https://raw.githubusercontent.com/sansoe2022/MAX-VPN-TIPS/main/sim.png" alt="Avatar" style="width:50px; height:50px; margin-top: 10px">
+		<div class="container">
+		  <h4><b>အင်တာနက်ဖရီးသံုးရန် ဆင်းမ်ကဒ်ဘက်မှာ လိုအပ်‌ေသာအရာများ</b></h4> 
+		  <span id="dots2"></span><span id="more2">
+			<img class="center" src="https://raw.githubusercontent.com/sansoe2022/MAX-VPN-TIPS/main/download.png" alt="Avatar" style="width:30px; height:30px; margin-top: 10px">
+			<b>Dtacဆင်းမ် (SIM) </b>
+			  <br> <mark>Dtacကတော့ နည်း(3)မျိုးအသုံးပြုနိုင်ပါတယ်</mark> <br> 
+			<p>ပထမနည်း - Dtac No Proလို့‌ေခါ်ပါတယ်
+			<br>Dtac No Proက ဆင်းမ်ကဒ် သက်တမ်းရှိရုံနဲ့ သုံးလို့ရပါတယ် ဘာမှစမတ်စရာမလိုပါဘူး ဖုန်းဘေ 0 နဲ့ သုံးရပါတယ် တစ်ပြားမှမကုန်ပါဘူးနော်✅ သို့ပေမယ့် လိုင်းအားကတော့ တစ်ချက်တစ်ချက် ကျတတ်ပါတယ် 
+			  <br><a style="color:red;">Dtac No Proနဲ့ သံုးမယ်ဆိုရင် Server‌ေနရာမှာ DtacNoPro စာသားပါတဲ့ ဆာဗာကို ‌ေရွးပြီး ချိတ်သံုးပါ</a> <br> <br>
+			</p>
+			<p>ဒုတိယနည်း - Dtac 90daysလို့ ‌ေခါ်ပါတယ်
+			  <br>Dtac 90daysက Dtac appထဲမှာ ဝင်စမတ်ရမှာပါ Dtac No Proထက် လိုင်းပိုကောင်းပါတယ်  ရက် 90ကို 61ဘတ်ကုန်ကျပါမယ် စမတ်နည်းကတော့ ‌ေအာက်ကလင့်မှာဝင်ပြီး ကြည့်ပါ
+			  <br><a style="color:blue;" href="http://user192159.piee.pw/4dm4aq"> စမတ်နည်းကြည့်ရန် </a>
+			  <br><a style="color:red;">Dtac 90daysနဲ့သံုးမယ်ဆိုရင် Server‌ေနရာမှာ Dtac90days စာသားပါတဲ့ ဆာဗာကို ‌ေရွးပြီး ချိတ်သံုးပါ</a> 	
+			</p>
+			<br>
+		
+			<p>တတိယနည်း- Dtac Line12 appsလို့‌ေခါ်ပါတယ်
+			  <br>Dtac Line12appsက အဓိက happy call proကို အရင်ဝယ်ရပါမယ် happy call ဝယ်ယူရန် *103*99#ကို နှိပ်ပါ စမတ်ခ 30ဘတ် ကုန်ကျပါမယ် (သို့မဟုတ်) Jaidee backup netကို စမတ်လည်းရပါတယ် *117*30# စမတ်ခ 20ဘတ်ပါ လတိုင်းစမတ်‌ေပးရပါတယ် happy callက ပထမလပဲ စမတ်ရပါတယ် နောက်လတွေဆို ဖုန်းဘေ 50ဘတ် ထည့်ပေးရပါတယ် မထည့်ပေးရင်မရဘူးနော် ထည့်ပေးလိုက်ရုံပါပဲ မဖြတ်ဘူး ပြီးရင် Dtac LINE 12apps ကိုပြန်စမတ်ပါ *104*777# တစ်လစာ 53ဘတ် အခွန်ခအပြီး ကျသင့်ပါမယ်  သူက ဖုန်း‌ေဘထားထားလည်းရပါတယ် ပိုက်ဆံမဖြတ်ပါဘူး 
+			  
+			  <br><a style="color:red;">Dtac Line12 appsနဲ့ သံုးမယ်ဆိုရင် Server‌ေနရာမှာ DtacLine12 စာသားပါတဲ့ ဆာဗာကို ‌ေရွးပြီး ချိတ်သံုးပါ</a> 	
+			</p>
+			
+			<img class="center" src="https://raw.githubusercontent.com/sansoe2022/MAX-VPN-TIPS/main/d6581b502519a9598831a38663f18c9a.jpeg" alt="Avatar" style="width:100px; height:auto; margin-top: 10px">
+			<b>Truemoveဆင်းမ် (SIM) </b>
+			<br> <mark>Truemoveကတော့ နည်း(1)မျိုးပဲ သံုးလို့ရပါ‌ေသးတယ်‌ေနာ် </mark> <br> 
+			<p>True No Proလို့‌ေခါ်ပါတယ်
+			  <br>True No Proက ဘာမှ စမတ်စရာမလိုပါ
+			  ဆင်းမ်အသစ်ဝယ်ပြီး တန်းချိတ်ပါပဲ အကယ်၍ ချိတ်မရပါကလစဥ် ဖုန်းဘေ 50ဘတ်ထည့်ပြီး *935*99# ကိုနှိပ်ပါ ပြီးရင် ဖုန်းကို ပါဝါ(power)ပိတ်ပြီး ပြန်ချိတ်ပါ
+			  <br><a style="color:red;">True No Proနဲ့ သံုးမယ်ဆိုရင် Server‌ေနရာမှာ TrueNoPro စာသားပါတဲ့ ဆာဗာကို ‌ေရွးပြီး ချိတ်သံုးပါ</a> <br> <br>
+			</p>
+			  
+			</span>
+		  <button class="btn" onclick="myFunction2()" id="myBtn2">ဖတ်ရန်</button>
+		</div>
+
+	  </div>
+
+	  <p style="text-align: center;">Copyright 2022© MAX-VPN</p>
+<script>
   
-    <!-- Left Column -->
-    <div class="w3-third">
-    
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <img src="assets/img/cover-takndscode.png" style="width:100%" alt="Avatar">
-          <div class="w3-display-bottomleft w3-container w3-text-black">
-            <h5> </h5>
-          </div>
-        </div>
-        <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Designer</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Thailand</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>mmtintaungkhaing@mail.com</p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+66992349823</p>
-          <hr>
+  function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
 
-          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-          <p>Adobe Photoshop</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
-          </div>
-          <p>Photography</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
-              <div class="w3-center w3-text-white">80%</div>
-            </div>
-          </div>
-          <p>Illustrator</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
-          </div>
-          <p>Media</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
-          </div>
-          <br>
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "ဖတ်ရန်";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "အကျဥ်းချုပ်ရန်";
+    moreText.style.display = "inline";
+  }
+}
+  
+            function myFunction2() {
+  var dots = document.getElementById("dots2");
+  var moreText = document.getElementById("more2");
+  var btnText = document.getElementById("myBtn2");
 
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-          <p>မြန်မာဘာသာ</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-          </div>
-          <p>English</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:88%"></div>
-          </div>
-          <p>Thailand</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:75%"></div>
-          </div>
-          <br>
-        </div>
-      </div><br>
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "ဖတ်ရန်";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "အကျဥ်းချုပ်ရန်";
+    moreText.style.display = "inline";
+  }
+}
 
-    <!-- End Left Column -->
+            
+</script>
     </div>
 
-    <!-- Right Column -->
-    <div class="w3-twothird">
-    
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Front End Developer / w3schools.com</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-          <p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Web Developer / something.com</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6>
-          <p>Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Graphic Designer / designsomething.com</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 - Mar 2012</h6>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p><br>
-        </div>
-      </div>
+  </body>
 
-      <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>W3Schools.com</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Forever</h6>
-          <p>Web Development! All I need to know in one place</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>London Business School</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
-          <p>Master Degree</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>School of Coding</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2013</h6>
-          <p>Bachelor Degree</p><br>
-        </div>
-      </div>
-
-    <!-- End Right Column -->
-    </div>
-    
-  <!-- End Grid -->
-  </div>
-  
-  <!-- End Page Container -->
-</div>
-
-<footer class="w3-container w3-teal w3-center w3-margin-top">
-  <p>Find me on social media.</p>
-  
-  <a href="https://fnetvpn.github.io/th/">
-  <i class="fa fa-facebook-square w3-hover-opacity"></i></a>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  
-  <p>Powered by <a href="fnetvpn.co.th" target="_blank">M-65P</a></p>
-</footer>
-
-</body>
 </html>
